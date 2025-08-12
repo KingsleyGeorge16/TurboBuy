@@ -1,0 +1,509 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0; padding: 0;
+    scroll-padding-top: 1rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #ff6a00;
+    --text-color: #080708;
+    --bg-color: #fff;
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 0 5rem 5rem 0;
+    background: var(--main-color);
+}
+
+img { width: 100%; }
+
+body { color: var(--text-color); }
+
+section { padding: 4em 0px 2rem; }
+
+.container{
+    max-width: 1068px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/* =========================================== */
+/*            HEADER CSS                       */
+/* =========================================== */
+header{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+}
+
+header.shadow{ 
+    background: var(--bg-color); 
+    box-shadow: 2px 4px 20px rgb(15 54 55 / 10%);
+    color: var(--text-color);
+    transition: .3s ease;
+} 
+
+header.shadow #search-icon,
+header.shadow .navbar a, 
+header.shadow .logo { color: var(--text-color); }
+
+header.shadow .navbar a:hover,
+header.shadow .navbar .active { color: var(--main-color); }
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+}
+
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--bg-color);
+    display: none;
+}
+
+.logo{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--bg-color);
+}
+
+.logo span { color: var(--main-color); }
+
+.navbar{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.navbar a{
+    color: var(--bg-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.navbar a:hover,
+.navbar .active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#search-icon{
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--bg-color);
+}
+
+.search-box{
+    position: absolute;
+    top: 110%; right: 0; left: 0;
+    background: var(--bg-color);
+    font-size: 20px;
+    color: #000;
+    box-shadow: 4px 4px 20px rgb(15 54 55 / 10%);
+    border: 1px solid var(--main-color);
+    border-radius: .5rem;
+    clip-path: circle(0% at 100% 0%);
+
+}
+
+.search-box.active{
+    clip-path: circle(144% at 100% 0%);
+    transition: .3s ease;
+}
+
+.search-box input{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.2rem;
+	color: var(--main-color);
+}
+
+.search-box input::placeholder { color: var(--main-color); }
+
+
+
+
+
+/* =========================================== */
+/*            HOME CSS                         */
+/* =========================================== */
+.home{
+    max-width: 1500px;
+    margin: auto;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(31, 31, 31, 0.658), rgba(31, 31, 31, 0.658)), url('../img/background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+}
+
+.home-text{
+    padding-left: 130px;
+    color: #fff;
+}
+
+.home-text h1{ 
+    font-size: 4rem; 
+    line-height: 80px; 
+    letter-spacing: 2px;
+}
+
+.home-text span { color: var(--main-color); }
+
+.home-text p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0.5rem 0px 1.5rem;
+    line-height: 35px;
+}
+
+.btn{
+    padding: 18px 75px;
+    font-size: 19px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.btn:hover { background: #ff3e28; }
+
+.btnn { padding: 10px 27px; }
+
+
+
+
+
+/* =========================================== */
+/*            CARS CSS                         */
+/* =========================================== */
+.heading { text-align: center; }
+
+.heading span{
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.heading p{
+    font-size: .938rem;
+    font-weight: 300;
+    margin: 0.5rem 0px 1.4rem;
+	line-height: 27px;
+}
+
+.cars-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.cars-container .box{
+    flex: 1 1 17rem;
+    position: relative;
+    height: 175px;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.cars-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.cars-container .box img:hover{
+    transform: scale(1.1);
+    transition: .3s ease;
+}
+
+.cars-container .box h2{
+    position: absolute;
+    bottom: 1rem; left: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+    background: var(--bg-color);
+    padding: 8px;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+.cars-container .box:hover h2{ 
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+
+
+
+
+/* =========================================== */
+/*            ABOUT CSS                        */
+/* =========================================== */
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img { flex: 1 1 21rem; }
+
+.about-text { flex: 1 1 21rem; }
+
+.about-text span{
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.about-text h2{ 
+    font-size: 1.9rem;
+    line-height: 40px;
+}
+
+.about-text p{
+    font-size: .938rem;
+    margin: 0.5rem 0px 1.4rem;
+    line-height: 27px;
+}
+
+
+
+
+
+/* =========================================== */
+/*            PARTS CSS                        */
+/* =========================================== */
+.parts-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.parts-container .box{
+    flex: 1 1 17rem;
+    position: relative; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: #f6f6f6;
+    border-radius: .5rem;
+}
+
+.parts-container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 1rem;
+}
+
+.parts-container .box h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.parts-container .box span{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.parts-container .box .fa{
+    color: var(--main-color);
+    margin: 0.8rem 0;
+}
+
+.parts-container .box .btn { max-width: 135px; }
+
+.parts-container .box .details{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1.8rem; right: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: .3s ease;
+}
+
+.parts-container .box .details:hover{
+    color: var(--main-color);
+    transition: .3s ease;
+    border-bottom: 1.5px solid var(--main-color);
+}
+
+
+
+
+
+/* =========================================== */
+/*            BLOG CSS                         */
+/* =========================================== */
+.blog-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.blog-container .box{
+    flex: 1 1 13rem;
+    background: #f1f1f1;
+    transition: .3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blog-container .box img{ 
+    transition: .3s ease; 
+    height: 205px; 
+    min-height: 205px; 
+    max-height: 205px; 
+}
+
+.blog-container .box:hover img { transform: scale(1.1); }
+
+.blog-container .box span{
+    font-size: .8rem;
+    color: var(--main-color);
+    padding-bottom: 20px;
+}
+
+.blog-container h3 { font-size: 1.2rem; line-height: 30px; }
+
+.blog-container .box .box-content { padding: 20px; }
+
+.blog-container .box p{
+    font-size: .938rem;
+    margin: 4px 0;
+    line-height: 25px;
+}
+
+.blog-container .box .blog-btn{
+    display: flex;
+    padding: 10px 14px;
+    max-width: 137px;
+    font-size: 17px;
+    align-items: center;
+    border-radius: 6px;
+    column-gap: 4px;
+    color: var(--main-color);
+    transition: .3s ease;
+    background: transparent;
+    border: 1px solid var(--main-color);
+}
+ 
+.blog-container .box .blog-btn .fa{ font-size: 17px; padding-left: 5px; }
+
+.blog-container .box .blog-btn:hover{
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+
+
+
+
+
+/* =========================================== */
+/*            FOOTER CSS                       */
+/* =========================================== */
+.footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.794), rgba(0, 0, 0, 0.715)), url('../img/footer-bg.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #f6f6f6;
+    border-top: 2px solid var(--main-color);
+    line-height: 30px;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container .logo{
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.footer-container .footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+}
+
+.social a{
+    font-size: 24px;
+    color: var(--bg-color);
+    margin-right: 1rem;
+    transition: .3s ease;
+}
+
+.social a:hover { color: var(--main-color); }
+
+.footer-box h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box p,
+.footer-box a{
+    color: #e7e7e7;
+    margin-bottom: 10px;
+    transition: .3s ease;
+}
+
+.useful a:hover{ 
+    color: var(--main-color); 
+    transform: translateX(10px);
+}
+
+.useful a span { font-size: 25px; }
+
+.useful a i { font-size: 20px; }
+
+.copyright{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.copyright p { font-size: 1.1rem; }
+
+.copyright a { color: var(--main-color); }
