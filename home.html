@@ -3,273 +3,611 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TurboBuy</title>
+    <title>TurboBuy | Premium Cars & Parts</title>
     <link rel="shortcut icon" href="assets/img/head-img.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/mediaqueries.css">
-    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- =====HEADER SECTION==================-->
-    <header>
-        <div class="nav container">
-            <i class="fa fa-bars" id="menu-icon"></i>
-
-            <a href="#home" class="logo">Turbo<span>Buy</span></a>
-
-            <ul class="navbar">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#cars">Cars</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#parts">Parts</a></li>
-                <li><a href="#blog">Our Blog</a></li>
-            </ul>
-
-            <i class="fa fa-search" id="search-icon"></i>
-
-            <div class="search-box container">
-                <input type="search" name="" id="" placeholder="Search Here...">
+    <!-- Navigation & Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-logo">
+                <a href="#home" class="logo">Turbo<span>Buy</span></a>
             </div>
-        </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#cars" class="nav-link">Cars</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#parts" class="nav-link">Parts</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon" id="search-icon"></i>
+                        <div class="search-box" id="search-box">
+                            <input type="search" placeholder="Search cars, parts, brands..." class="search-input">
+                            <button class="search-btn">Search</button>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-outline">Sign In</a>
+                </div>
+            </div>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container container">
+            <div class="hero-content">
+                <span class="hero-badge">Premium Marketplace</span>
+                <h1 class="hero-title">Find Your Dream <span class="highlight">Car</span> Today</h1>
+                <p class="hero-description">Discover the largest collection of premium vehicles and auto parts with unbeatable prices and exceptional quality.</p>
+                <div class="hero-actions">
+                    <a href="#cars" class="btn btn-primary">Browse Cars</a>
+                    <a href="#parts" class="btn btn-secondary">Shop Parts</a>
+                </div>
 
-    <!-- =====HOME SECTION====================-->
-    <section class="home" id="home">
-        <div class="home-text">
-            <h1>We Have Everything <br> Your <span>Car</span> Needs</h1>
-            <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Illo, modi.</p>
-
-            <a href="#" class="btn">Discover Now</a>
-        </div>
-    </section>
-
-
-    <!-- =====CARS SECTION====================-->
-    <section class="cars" id="cars">
-        <div class="heading">
-            <span>All Cars</span>
-            <h2>We have all types of cars</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, exercitationem?</p>
-        </div>
-
-        <div class="cars-container container">
-
-            <div class="box">
-                <img src="assets/img/car-1.png" alt="">
-                <h2>Audi GT-7</h2>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/car-2.jpg" alt="">
-                <h2>Porsche GT</h2>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/car-3.png" alt="">
-                <h2>Nissan GT-R</h2>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/car-4.png" alt="">
-                <h2>Porsche G63</h2>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/car-5.png" alt="">
-                <h2>Audi </h2>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/car-6.jpg" alt="">
-                <h2>Porsche 2001</h2>
-            </div>
-
-        </div>
-    </section>
-    
-    
-    <!-- =====ABOUT SECTION===================-->
-    <section class="about container" id="about">
-        <div class="about-img">
-            <img src="assets/img/about.png" alt="">
-        </div>
-        <div class="about-text">
-            <span>About Us</span>
-            <h2>Cheap Prices With <br>Quality Cars</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Facere praesentium ab reiciendis temporibus eveniet labore 
-                ea tempora voluptates quibusdam ullam.</p>
-            <a href="#" class="btn">Learn More</a>
-        </div>
-    </section>
-
-
-    <!-- =====PARTS SECTION===================-->
-    <section class="parts" id="parts">
-        <div class="heading">
-            <span>What We Offer</span>
-            <h2>Our Car Is Always Excellent</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Quam ea ipsa dolorum odio laborum hic distinctio optio 
-                error nisi veniam!</p>
-        </div>
-        <div class="parts-container container">
-
-            <div class="box">
-                <img src="assets/img/part-1.jpg" alt="">
-                <h3>Auto Spare Parts</h3>
-                <span>$120.99</span>
-                <i class="fa fa-star">(6 Reviews)</i>
-                <a href="#" class="btn btnn">Buy Now</a>
-                <a href="#" class="details">View Details</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/part-2.jpg" alt="">
-                <h3>Auto Spare Parts</h3>
-                <span>$120.99</span>
-                <i class="fa fa-star">(6 Reviews)</i>
-                <a href="#" class="btn btnn">Buy Now</a>
-                <a href="#" class="details">View Details</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/part-3.png" alt="">
-                <h3>Auto Spare Parts</h3>
-                <span>$120.99</span>
-                <i class="fa fa-star">(6 Reviews)</i>
-                <a href="#" class="btn btnn">Buy Now</a>
-                <a href="#" class="details">View Details</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/part-4.jpg" alt="">
-                <h3>Auto Spare Parts</h3>
-                <span>$120.99</span>
-                <i class="fa fa-star">(6 Reviews)</i>
-                <a href="#" class="btn btnn">Buy Now</a>
-                <a href="#" class="details">View Details</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/part-5.jpg" alt="">
-                <h3>Auto Spare Parts</h3>
-                <span>$120.99</span>
-                <i class="fa fa-star">(6 Reviews)</i>
-                <a href="#" class="btn btnn">Buy Now</a>
-                <a href="#" class="details">View Details</a>
-            </div>
-
-            <div class="box">
-                <img src="assets/img/part-6.png" alt="">
-                <h3>Auto Spare Parts</h3>
-                <span>$120.99</span>
-                <i class="fa fa-star">(6 Reviews)</i>
-                <a href="#" class="btn btnn">Buy Now</a>
-                <a href="#" class="details">View Details</a>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- =====BLOG SECTION====================-->
-    <section class="blog" id="blog">
-        <div class="heading">
-            <span>Blog & News</span>
-            <h2>Our Blog Content</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Quam ea ipsa dolorum odio laborum hic distinctio optio 
-                error nisi veniam!</p>
-        </div>
-        <div class="blog-container container">
-
-            <div class="box">
-                <img src="assets/img/car-10.png" alt="">
-                <div class="box-content">
-                    <span>Feb 18, 2025</span>
-                    <h3>How To Get Perfect Car At Low Price</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Veritatis sapiente, impedit labore nesciunt.</p>
-                    <a href="#" class="blog-btn">Read More <i class="fa fa-arrow-right"></i></a>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Premium Cars</p>
+                    </div>
+                    <div class="stat">
+                        <h3>2,000+</h3>
+                        <p>Auto Parts</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Customer Satisfaction</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="box">
-                <img src="assets/img/car-6.jpg" alt="">
-                <div class="box-content">
-                    <span>April 28, 2025</span>
-                    <h3>How To Get Perfect Car At Low Price</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Veritatis sapiente, impedit labore nesciunt.</p>
-                    <a href="#" class="blog-btn">Read More <i class="fa fa-arrow-right"></i></a>
+            <div class="hero-image">
+                <div class="image-slider">
+                    <img src="assets/img/car-1.png" alt="Audi GT-7" class="slider-img active">
+                    <img src="assets/img/car-2.jpg" alt="Porsche GT" class="slider-img">
+                    <img src="assets/img/car-3.png" alt="Nissan GT-R" class="slider-img">
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
-
-            <div class="box">
-                <img src="assets/img/car-11.png" alt="">
-                <div class="box-content">
-                    <span>Jul 08, 2025</span>
-                    <h3>How To Get Perfect Car At Low Price</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Veritatis sapiente, impedit labore nesciunt.</p>
-                    <a href="#" class="blog-btn">Read More <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-
         </div>
     </section>
 
+    <!-- Cars Section -->
+    <section class="section cars" id="cars">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Collection</span>
+                <h2 class="section-title">Premium Vehicles</h2>
+                <p class="section-description">Explore our curated selection of luxury and performance cars from top brands worldwide.</p>
+            </div>
 
-    <!-- =====FOOTER SECTION==================-->
-    <section class="footer">
-        <div class="footer-container container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Cars</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="luxury">Luxury</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+            </div>
 
-            <div class="footer-box">
-                <a href="#home" class="logo">Turbo<span>Buy</span></a>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, minus.</p>
-                <div class="social">
-                    <a href="https://www.facebook.com/TurboBuy"><i class="fa fa-facebook-square"></i></a>
-                    <a href="https://www.x.com/We_TurboBuy"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/we_are_turboBuy"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.youtube.com/Turbo-Buy"><i class="fa fa-youtube-play"></i></a>
+            <div class="cars-container">
+                <div class="car-card" data-category="sports">
+                    <div class="car-img">
+                        <img src="assets/img/car-1.png" alt="Audi GT-7">
+                        <span class="car-badge">Hot Deal</span>
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Audi GT-7</h3>
+                        <p class="car-description">Premium sports sedan with exceptional performance and luxury features.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 320 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$89,999</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="sports">
+                    <div class="car-img">
+                        <img src="assets/img/car-2.jpg" alt="Porsche GT">
+                        <span class="car-badge">Limited</span>
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Porsche GT</h3>
+                        <p class="car-description">Track-focused performance machine with race-inspired engineering.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-cogs"></i> Manual</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 350 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$125,500</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="sports">
+                    <div class="car-img">
+                        <img src="assets/img/car-3.png" alt="Nissan GT-R">
+                        <span class="car-badge">Popular</span>
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Nissan GT-R</h3>
+                        <p class="car-description">Legendary supercar with cutting-edge technology and raw power.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 315 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$99,999</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="suv">
+                    <div class="car-img">
+                        <img src="assets/img/car-4.png" alt="Porsche G63">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Porsche G63</h3>
+                        <p class="car-description">Luxury SUV combining off-road capability with premium comfort.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 240 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$135,750</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="luxury">
+                    <div class="car-img">
+                        <img src="assets/img/car-5.png" alt="Audi">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Audi A8</h3>
+                        <p class="car-description">Executive luxury sedan with state-of-the-art technology and comfort.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 250 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$85,500</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="luxury">
+                    <div class="car-img">
+                        <img src="assets/img/car-6.jpg" alt="Porsche 2001">
+                        <span class="car-badge">Classic</span>
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Porsche 911 Classic</h3>
+                        <p class="car-description">Timeless design with modern performance upgrades.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-cogs"></i> Manual</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 280 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$150,000</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="footer-box useful">
-                <h3>Pages</h3>
-                <a href="#home"><span>•</span> <i class="fa fa-angle-right"></i> Home</a>
-                <a href="#cars"><span>•</span> <i class="fa fa-angle-right"></i> Cars</a>
-                <a href="#parts"><span>•</span> <i class="fa fa-angle-right"></i> Parts</a>
-                <a href="#sales"><span>•</span> <i class="fa fa-angle-right"></i> Sales</a>
+
+            <div class="text-center">
+                <a href="#" class="btn btn-outline">View All Cars <i class="fas fa-arrow-right"></i></a>
             </div>
-
-            <div class="footer-box useful">
-                <h3>Legal Info</h3>
-                <a href="#"><span>•</span> <i class="fa fa-angle-right"></i> Privacy Policy</a>
-                <a href="#"><span>•</span> <i class="fa fa-angle-right"></i> Refund Policy</a>
-                <a href="#"><span>•</span> <i class="fa fa-angle-right"></i> Cookie Policy</a>
-            </div> 
-
-            <div class="footer-box">
-                <h3>Contact</h3>
-                <p>United States</p>
-                <p>Japan</p>
-                <p>Germany</p>
-            </div>
-
-        </div>
-
-        <div class="copyright">
-            <p>Copyright © <a href="#home">TurboBuy</a> 2025 | All Rights Reserved</p>
         </div>
     </section>
 
-    
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container about-container">
+            <div class="about-img">
+                <img src="assets/img/about.png" alt="About TurboBuy">
+                <div class="about-experience">
+                    <h3>15+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-subtitle">About Us</span>
+                <h2 class="section-title">Trusted Automotive Marketplace Since 2008</h2>
+                <p class="about-description">At TurboBuy, we connect car enthusiasts with their dream vehicles while providing premium auto parts and exceptional service. Our commitment to quality and customer satisfaction has made us a leader in the automotive industry.</p>
 
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Quality Assurance</h4>
+                            <p>Every vehicle undergoes 150-point inspection</p>
+                        </div>
+                    </div>
 
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Best Price Guarantee</h4>
+                            <p>We'll match any competitor's verified offer</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>24/7 Support</h4>
+                            <p>Expert assistance whenever you need it</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parts Section -->
+    <section class="section parts" id="parts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Auto Parts</span>
+                <h2 class="section-title">Premium Spare Parts</h2>
+                <p class="section-description">Genuine parts and accessories for all major car brands with warranty included.</p>
+            </div>
+
+            <div class="parts-container">
+                <div class="part-card">
+                    <div class="part-img">
+                        <img src="assets/img/part-1.jpg" alt="Auto Spare Parts">
+                        <div class="part-overlay">
+                            <button class="quick-view" data-part="1">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="part-content">
+                        <h3 class="part-title">Performance Brake Kit</h3>
+                        <p class="part-description">High-performance brake system for sports cars</p>
+
+                        <div class="part-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(142 Reviews)</span>
+                        </div>
+
+                        <div class="part-price">
+                            <h4>$120.99</h4>
+                            <span class="part-stock in-stock">In Stock</span>
+                        </div>
+
+                        <div class="part-actions">
+                            <button class="btn btn-small add-to-cart" data-part="1">Add to Cart</button>
+                            <a href="#" class="details-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-img">
+                        <img src="assets/img/part-2.jpg" alt="Auto Spare Parts">
+                        <div class="part-overlay">
+                            <button class="quick-view" data-part="2">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="part-content">
+                        <h3 class="part-title">Turbocharger Kit</h3>
+                        <p class="part-description">Complete turbo upgrade for increased horsepower</p>
+
+                        <div class="part-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="review-count">(89 Reviews)</span>
+                        </div>
+
+                        <div class="part-price">
+                            <h4>$459.99</h4>
+                            <span class="part-stock in-stock">In Stock</span>
+                        </div>
+
+                        <div class="part-actions">
+                            <button class="btn btn-small add-to-cart" data-part="2">Add to Cart</button>
+                            <a href="#" class="details-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-img">
+                        <img src="assets/img/part-3.png" alt="Auto Spare Parts">
+                        <div class="part-overlay">
+                            <button class="quick-view" data-part="3">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="part-content">
+                        <h3 class="part-title">Suspension System</h3>
+                        <p class="part-description">Adjustable coilover suspension for improved handling</p>
+
+                        <div class="part-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="review-count">(204 Reviews)</span>
+                        </div>
+
+                        <div class="part-price">
+                            <h4>$720.50</h4>
+                            <span class="part-stock low-stock">Low Stock</span>
+                        </div>
+
+                        <div class="part-actions">
+                            <button class="btn btn-small add-to-cart" data-part="3">Add to Cart</button>
+                            <a href="#" class="details-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-img">
+                        <img src="assets/img/part-4.jpg" alt="Auto Spare Parts">
+                        <div class="part-overlay">
+                            <button class="quick-view" data-part="4">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="part-content">
+                        <h3 class="part-title">Performance Exhaust</h3>
+                        <p class="part-description">Stainless steel exhaust system for better sound & flow</p>
+
+                        <div class="part-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(167 Reviews)</span>
+                        </div>
+
+                        <div class="part-price">
+                            <h4>$320.99</h4>
+                            <span class="part-stock in-stock">In Stock</span>
+                        </div>
+
+                        <div class="part-actions">
+                            <button class="btn btn-small add-to-cart" data-part="4">Add to Cart</button>
+                            <a href="#" class="details-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Latest News</span>
+                <h2 class="section-title">Car Blog & Updates</h2>
+                <p class="section-description">Stay updated with the latest automotive trends, reviews, and buying guides.</p>
+            </div>
+
+            <div class="blog-container">
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="assets/img/car-10.png" alt="Car Buying Guide">
+                        <div class="blog-date">
+                            <span>18</span>
+                            <span>Feb</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Buying Guide</span>
+                            <span class="blog-read-time">5 min read</span>
+                        </div>
+                        <h3 class="blog-title">How to Get the Perfect Car at a Low Price</h3>
+                        <p class="blog-excerpt">Discover insider tips and negotiation strategies to secure your dream car without breaking the bank.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="assets/img/car-6.jpg" alt="Porsche Maintenance">
+                        <div class="blog-date">
+                            <span>28</span>
+                            <span>Apr</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Maintenance</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
+                        <h3 class="blog-title">Essential Maintenance Tips for Sports Cars</h3>
+                        <p class="blog-excerpt">Keep your high-performance vehicle in top condition with our expert maintenance checklist.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-img">
+                        <img src="assets/img/car-11.png" alt="Electric Vehicles">
+                        <div class="blog-date">
+                            <span>08</span>
+                            <span>Jul</span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Future Tech</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <h3 class="blog-title">The Future of Electric Performance Cars</h3>
+                        <p class="blog-excerpt">Explore how electric technology is revolutionizing the performance car industry.</p>
+                        <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container newsletter-container">
+            <div class="newsletter-content">
+                <h2>Stay Updated with New Arrivals</h2>
+                <p>Subscribe to our newsletter and get exclusive deals on cars and parts</p>
+            </div>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required class="newsletter-input">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#home" class="footer-logo">Turbo<span>Buy</span></a>
+                    <p class="footer-description">Your premier destination for premium cars and auto parts since 2008. Quality, trust, and performance.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/TurboBuy" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.x.com/We_TurboBuy" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/we_are_turboBuy" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/Turbo-Buy" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#cars"><i class="fas fa-chevron-right"></i> Cars</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#parts"><i class="fas fa-chevron-right"></i> Parts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Legal Info</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Refund Policy</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> New York, USA</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Berlin, Germany</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@turbobuy.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 TurboBuy. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for car enthusiasts</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="cart-close" id="cart-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added dynamically -->
+            <div class="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quick-view-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="./assets/js/scripts.js"></script>
 </body>
 </html>
