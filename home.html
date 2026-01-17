@@ -7,9 +7,11 @@
     <link rel="shortcut icon" href="assets/img/head-img.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/mediaqueries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css"> -->
 </head>
 <body>
 
@@ -17,7 +19,7 @@
     <header class="header">
         <nav class="nav container">
             <div class="nav-logo">
-                <a href="#home" class="logo">Turbo<span>Buy</span></a>
+                <a href="#home" class="logo"><i class="fas fa-car"></i> Turbo<span>Buy</span></a>
             </div>
 
             <div class="nav-menu" id="nav-menu">
@@ -77,9 +79,11 @@
 
             <div class="hero-image">
                 <div class="image-slider">
-                    <img src="assets/img/car-1.png" alt="Audi GT-7" class="slider-img active">
+                    <img src="assets/img/car-1.png" alt="Lamborghini Avantador" class="slider-img active">
                     <img src="assets/img/car-2.jpg" alt="Porsche GT" class="slider-img">
-                    <img src="assets/img/car-3.png" alt="Nissan GT-R" class="slider-img">
+                    <img src="assets/img/car-3.png" alt="Lamborghini 2026" class="slider-img">
+                    <img src="assets/img/car-6.jpg" alt="Porsche Classic Vintage" class="slider-img">
+                    <img src="assets/img/car-12.jpg" alt="Lamborghini Terzo Millennio" class="slider-img">
                 </div>
                 <div class="slider-controls">
                     <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
@@ -102,17 +106,17 @@
                 <button class="filter-btn active" data-filter="all">All Cars</button>
                 <button class="filter-btn" data-filter="sports">Sports</button>
                 <button class="filter-btn" data-filter="luxury">Luxury</button>
-                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="classicvintage">Classic Vintage</button>
             </div>
 
             <div class="cars-container">
                 <div class="car-card" data-category="sports">
                     <div class="car-img">
-                        <img src="assets/img/car-1.png" alt="Audi GT-7">
-                        <span class="car-badge">Hot Deal</span>
+                        <img src="assets/img/car-1.png" alt="Lamborghini Aventador 2022">
+                        <span class="car-badge">Hot Deal</span> 
                     </div>
                     <div class="car-content">
-                        <h3 class="car-title">Audi GT-7</h3>
+                        <h3 class="car-title">Lamborghini Aventador 2022</h3>
                         <p class="car-description">Premium sports sedan with exceptional performance and luxury features.</p>
                         <div class="car-info">
                             <span><i class="fas fa-gas-pump"></i> Petrol</span>
@@ -120,13 +124,13 @@
                             <span><i class="fas fa-tachometer-alt"></i> 320 km/h</span>
                         </div>
                         <div class="car-price">
-                            <h4>$89,999</h4>
+                            <h4>$389,999</h4>
                             <a href="#" class="btn btn-small">View Details</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="car-card" data-category="sports">
+                <div class="car-card" data-category="luxury">
                     <div class="car-img">
                         <img src="assets/img/car-2.jpg" alt="Porsche GT">
                         <span class="car-badge">Limited</span>
@@ -140,13 +144,13 @@
                             <span><i class="fas fa-tachometer-alt"></i> 350 km/h</span>
                         </div>
                         <div class="car-price">
-                            <h4>$125,500</h4>
+                            <h4>$325,500</h4>
                             <a href="#" class="btn btn-small">View Details</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="car-card" data-category="sports">
+                <div class="car-card" data-category="luxury">
                     <div class="car-img">
                         <img src="assets/img/car-3.png" alt="Nissan GT-R">
                         <span class="car-badge">Popular</span>
@@ -160,19 +164,19 @@
                             <span><i class="fas fa-tachometer-alt"></i> 315 km/h</span>
                         </div>
                         <div class="car-price">
-                            <h4>$99,999</h4>
+                            <h4>$359,999</h4>
                             <a href="#" class="btn btn-small">View Details</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="car-card" data-category="suv">
+                <div class="car-card" data-category="luxury">
                     <div class="car-img">
-                        <img src="assets/img/car-4.png" alt="Porsche G63">
+                        <img src="assets/img/car-9.png" alt="Porsche G63">
                     </div>
                     <div class="car-content">
                         <h3 class="car-title">Porsche G63</h3>
-                        <p class="car-description">Luxury SUV combining off-road capability with premium comfort.</p>
+                        <p class="car-description">Luxury sports car with premium comfort.</p>
                         <div class="car-info">
                             <span><i class="fas fa-gas-pump"></i> Diesel</span>
                             <span><i class="fas fa-cogs"></i> Automatic</span>
@@ -185,20 +189,98 @@
                     </div>
                 </div>
 
-                <div class="car-card" data-category="luxury">
+                <div class="car-card" data-category="sports">
                     <div class="car-img">
-                        <img src="assets/img/car-5.png" alt="Audi">
+                        <img src="assets/img/car-12.jpg" alt="Lamborghini Terzo Millennio">
                     </div>
                     <div class="car-content">
-                        <h3 class="car-title">Audi A8</h3>
-                        <p class="car-description">Executive luxury sedan with state-of-the-art technology and comfort.</p>
+                        <h3 class="car-title">Lamborghini Terzo Millennio</h3>
+                        <p class="car-description">Executive futuristic sports car with state-of-the-art technology and comfort.</p>
                         <div class="car-info">
                             <span><i class="fas fa-gas-pump"></i> Hybrid</span>
                             <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 350 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$485,500</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="classicvintage">
+                    <div class="car-img">
+                        <img src="assets/img/car-6.jpg" alt="Porsche 2001">
+                        <span class="car-badge">Classic</span>
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Porsche 911 Classic</h3>
+                        <p class="car-description">Timeless design with early modern performance.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-cogs"></i> Manual</span>
                             <span><i class="fas fa-tachometer-alt"></i> 250 km/h</span>
                         </div>
                         <div class="car-price">
-                            <h4>$85,500</h4>
+                            <h4>$150,000</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="classicvintage">
+                    <div class="car-img">
+                        <img src="assets/img/car-13.png" alt="Porsche 1990 Vintage">
+                        <span class="car-badge">Vintage</span>
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Porsche 1990 Vintage</h3>
+                        <p class="car-description">Timeless design with vintage performance and style.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                            <span><i class="fas fa-cogs"></i> Manual</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 230 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$250,000</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="sports">
+                    <div class="car-img">
+                        <img src="assets/img/car-14.png" alt="Lamborghini Sesto Elemento">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Lamborghini Sesto Elemento</h3>
+                        <p class="car-description">Premium sports cars with fantastic performance and luxury features.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 360 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$485,500</h4>
+                            <a href="#" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card" data-category="sports">
+                    <div class="car-img">
+                        <img src="assets/img/car-15.jpg" alt="Lamborghini Aventador 2025">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Lamborghini Aventador 2025</h3>
+                        <p class="car-description">Premium sports cars with fantastic performance and luxury features.</p>
+                        <div class="car-info">
+                            <span><i class="fas fa-gas-pump"></i> Hybrid</span>
+                            <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 380 km/h</span>
+                        </div>
+                        <div class="car-price">
+                            <h4>$500,000</h4>
                             <a href="#" class="btn btn-small">View Details</a>
                         </div>
                     </div>
@@ -206,19 +288,18 @@
 
                 <div class="car-card" data-category="luxury">
                     <div class="car-img">
-                        <img src="assets/img/car-6.jpg" alt="Porsche 2001">
-                        <span class="car-badge">Classic</span>
+                        <img src="assets/img/car-17.jpg" alt="Porsche X23">
                     </div>
                     <div class="car-content">
-                        <h3 class="car-title">Porsche 911 Classic</h3>
-                        <p class="car-description">Timeless design with modern performance upgrades.</p>
+                        <h3 class="car-title">Porsche X23</h3>
+                        <p class="car-description">Luxury sports car with premium comfort and speed.</p>
                         <div class="car-info">
-                            <span><i class="fas fa-gas-pump"></i> Petrol</span>
-                            <span><i class="fas fa-cogs"></i> Manual</span>
-                            <span><i class="fas fa-tachometer-alt"></i> 280 km/h</span>
+                            <span><i class="fas fa-gas-pump"></i> Diesel</span>
+                            <span><i class="fas fa-cogs"></i> Automatic</span>
+                            <span><i class="fas fa-tachometer-alt"></i> 240 km/h</span>
                         </div>
                         <div class="car-price">
-                            <h4>$150,000</h4>
+                            <h4>$135,750</h4>
                             <a href="#" class="btn btn-small">View Details</a>
                         </div>
                     </div>
@@ -235,7 +316,7 @@
     <section class="section about" id="about">
         <div class="container about-container">
             <div class="about-img">
-                <img src="assets/img/about.png" alt="About TurboBuy">
+                <img src="assets/img/car-1.png" alt="About TurboBuy">
                 <div class="about-experience">
                     <h3>15+</h3>
                     <p>Years Experience</p>
@@ -322,7 +403,6 @@
 
                         <div class="part-actions">
                             <button class="btn btn-small add-to-cart" data-part="1">Add to Cart</button>
-                            <a href="#" class="details-link">Details</a>
                         </div>
                     </div>
                 </div>
@@ -356,7 +436,6 @@
 
                         <div class="part-actions">
                             <button class="btn btn-small add-to-cart" data-part="2">Add to Cart</button>
-                            <a href="#" class="details-link">Details</a>
                         </div>
                     </div>
                 </div>
@@ -390,7 +469,6 @@
 
                         <div class="part-actions">
                             <button class="btn btn-small add-to-cart" data-part="3">Add to Cart</button>
-                            <a href="#" class="details-link">Details</a>
                         </div>
                     </div>
                 </div>
@@ -424,7 +502,72 @@
 
                         <div class="part-actions">
                             <button class="btn btn-small add-to-cart" data-part="4">Add to Cart</button>
-                            <a href="#" class="details-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-img">
+                        <img src="assets/img/part-5.jpg" alt="Auto Spare Parts">
+                        <div class="part-overlay">
+                            <button class="quick-view" data-part="5">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="part-content">
+                        <h3 class="part-title">Hydrogen Exhaust</h3>
+                        <p class="part-description">Hydrogen exhaust system for better sound & flow</p>
+
+                        <div class="part-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(241 Reviews)</span>
+                        </div>
+
+                        <div class="part-price">
+                            <h4>$455.99</h4>
+                            <span class="part-stock low-stock">Low Stock</span>
+                        </div>
+
+                        <div class="part-actions">
+                            <button class="btn btn-small add-to-cart" data-part="5">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part-card">
+                    <div class="part-img">
+                        <img src="assets/img/part-6.png" alt="Auto Spare Parts">
+                        <div class="part-overlay">
+                            <button class="quick-view" data-part="6">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="part-content">
+                        <h3 class="part-title">4 Toyota Style Tyres</h3>
+                        <p class="part-description">Nice Toyota style tyres for smooth ride</p>
+
+                        <div class="part-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(153 Reviews)</span>
+                        </div>
+
+                        <div class="part-price">
+                            <h4>$190.99</h4>
+                            <span class="part-stock in-stock">In Stock</span>
+                        </div>
+
+                        <div class="part-actions">
+                            <button class="btn btn-small add-to-cart" data-part="6">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -557,8 +700,8 @@
                         <li><i class="fas fa-map-marker-alt"></i> New York, USA</li>
                         <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
                         <li><i class="fas fa-map-marker-alt"></i> Berlin, Germany</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@turbobuy.com</li>
+                        <li><a href="tel:+15551234567"><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</a></li>
+                        <li><a href="mailto:info@turbobuy.com"><i class="fas fa-envelope"></i> info@turbobuy.com</a></li>
                     </ul>
                 </div>
             </div>
